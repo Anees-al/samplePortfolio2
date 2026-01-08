@@ -1,8 +1,8 @@
-
+import {motion} from 'framer-motion'
 
 const Nav = () => {
   return (
-    <div className="flex flex-row justify-between py-1 px-2">
+    <motion.div className="flex flex-row justify-between py-1 px-2" initial={{y:-100,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:0.5}}>
       <p className="text-2xl font-bold"><span className="text-4xl font-black text-yellow-400">.</span> Anees <span className="text-sm font-semibold text-gray-600">Designer</span></p>
       <div></div>
 
@@ -12,7 +12,7 @@ const Nav = () => {
         <p className="cursor-pointer hover:text-xl">Project</p>
         <p className="cursor-pointer hover:text-xl">Contact</p>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
